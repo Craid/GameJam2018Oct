@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class LevelHandleClick : IHandleClick {
 
-	public IHandleClick[] handleClickList;
+	IHandleClick[] handleClickList;
 
 	void Start(){
 		handleClickList = GetComponentsInChildren<IHandleClick>();
+
+		InvokeRepeating ("HandleClick", 0, 1f);
 	}
 
 
