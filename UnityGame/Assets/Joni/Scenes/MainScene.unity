@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 282841753}
   - component: {fileID: 282841752}
   m_Layer: 5
-  m_Name: Name
+  m_Name: Helper2_Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,7 +559,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1946513482}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 346880255}
   - component: {fileID: 346880254}
   m_Layer: 5
-  m_Name: Anzahl
+  m_Name: Helper2_Anzahl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -634,7 +634,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1946513482}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -708,8 +708,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 449909884}
   - {fileID: 927911687}
+  - {fileID: 449909884}
   m_Father: {fileID: 1505504313}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -764,7 +764,7 @@ GameObject:
   - component: {fileID: 449909886}
   - component: {fileID: 449909885}
   m_Layer: 5
-  m_Name: AddOne
+  m_Name: Add_Helper4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -781,7 +781,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 430972749}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -937,18 +937,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 482131195}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &482131195
@@ -1066,6 +1055,7 @@ GameObject:
   - component: {fileID: 743859171}
   - component: {fileID: 743859173}
   - component: {fileID: 743859172}
+  - component: {fileID: 743859174}
   m_Layer: 5
   m_Name: Helper1
   m_TagString: Untagged
@@ -1083,10 +1073,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1684304927}
   - {fileID: 1632350987}
   - {fileID: 793418520}
   - {fileID: 1548936058}
+  - {fileID: 1684304927}
   m_Father: {fileID: 1505504313}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1129,6 +1119,24 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 743859170}
   m_CullTransparentMesh: 0
+--- !u!114 &743859174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 743859170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3687bbc02924c9b90a5cc6b2ed7989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  helperName: Sozialarbeiter
+  count: 0
+  price: 80
+  trashPerSecond: 1
+  addOne: {fileID: 1684304928}
+  countIndicator: {fileID: 1548936059}
+  clicker: {fileID: 1287998600}
 --- !u!1 &793418519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,7 +1148,7 @@ GameObject:
   - component: {fileID: 793418522}
   - component: {fileID: 793418521}
   m_Layer: 5
-  m_Name: Name
+  m_Name: Helper1_Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1157,7 +1165,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 743859171}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1289,7 +1297,7 @@ GameObject:
   - component: {fileID: 927911689}
   - component: {fileID: 927911688}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Helper3_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1306,7 +1314,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 430972749}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1596,9 +1604,9 @@ MonoBehaviour:
   victory_time: 3
   boss_victory_time: 5
   animator: {fileID: 1287998602}
-  helper:
-  - {fileID: 0}
-  - {fileID: 0}
+  helpers:
+  - {fileID: 743859174}
+  - {fileID: 1946513485}
   button: {fileID: 482131194}
   timeIndicator: {fileID: 1392518284}
   moneyIndicator: {fileID: 82963395}
@@ -1722,7 +1730,7 @@ GameObject:
   - component: {fileID: 1370229111}
   - component: {fileID: 1370229110}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Helper2_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1739,7 +1747,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1946513482}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1957,7 +1965,7 @@ GameObject:
   - component: {fileID: 1411947311}
   - component: {fileID: 1411947310}
   m_Layer: 5
-  m_Name: AddOne
+  m_Name: Add_Helper3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1974,7 +1982,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2134309250}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2227,7 +2235,7 @@ GameObject:
   - component: {fileID: 1548936060}
   - component: {fileID: 1548936059}
   m_Layer: 5
-  m_Name: Anzahl
+  m_Name: Helper1_Anzahl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2244,7 +2252,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 743859171}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2302,7 +2310,7 @@ GameObject:
   - component: {fileID: 1632350989}
   - component: {fileID: 1632350988}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Helper1_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2319,7 +2327,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 743859171}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2372,7 +2380,7 @@ GameObject:
   - component: {fileID: 1684304929}
   - component: {fileID: 1684304928}
   m_Layer: 5
-  m_Name: AddOne
+  m_Name: Add_Helper1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2389,12 +2397,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 743859171}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36.288, y: 0.0000061989}
-  m_SizeDelta: {x: 72.575, y: 46.35}
+  m_AnchoredPosition: {x: 35, y: 0}
+  m_SizeDelta: {x: 68, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1684304928
 MonoBehaviour:
@@ -2416,7 +2424,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.43529412}
+    m_HighlightedColor: {r: 1, g: 0.9858491, b: 0.9858491, a: 0}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2657,7 +2665,7 @@ GameObject:
   - component: {fileID: 1834371283}
   - component: {fileID: 1834371282}
   m_Layer: 5
-  m_Name: AddOne
+  m_Name: Add_Helper2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2674,12 +2682,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1946513482}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36.288, y: 0}
-  m_SizeDelta: {x: 72.575, y: 46.35}
+  m_AnchoredPosition: {x: 35, y: 0}
+  m_SizeDelta: {x: 68, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834371282
 MonoBehaviour:
@@ -2701,7 +2709,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.43529412}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2837,6 +2845,7 @@ GameObject:
   - component: {fileID: 1946513482}
   - component: {fileID: 1946513484}
   - component: {fileID: 1946513483}
+  - component: {fileID: 1946513485}
   m_Layer: 5
   m_Name: Helper2
   m_TagString: Untagged
@@ -2854,10 +2863,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1834371281}
   - {fileID: 1370229109}
   - {fileID: 282841751}
   - {fileID: 346880253}
+  - {fileID: 1834371281}
   m_Father: {fileID: 1505504313}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2900,6 +2909,24 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1946513481}
   m_CullTransparentMesh: 0
+--- !u!114 &1946513485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1946513481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3687bbc02924c9b90a5cc6b2ed7989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  helperName: Ehrenamtlicher Mitarbeiter
+  count: 0
+  price: 200
+  trashPerSecond: 0
+  addOne: {fileID: 1834371282}
+  countIndicator: {fileID: 346880254}
+  clicker: {fileID: 1287998600}
 --- !u!1 &2117543221
 GameObject:
   m_ObjectHideFlags: 0
@@ -3014,8 +3041,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1411947309}
   - {fileID: 2142133180}
+  - {fileID: 1411947309}
   m_Father: {fileID: 1505504313}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3069,7 +3096,7 @@ GameObject:
   - component: {fileID: 2142133182}
   - component: {fileID: 2142133181}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Helper3_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3086,7 +3113,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2134309250}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
