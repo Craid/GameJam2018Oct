@@ -12,7 +12,7 @@ public class Clicker : MonoBehaviour
     private int trash;                       //trashcounter for the current level 
     private int trashPerSecond;              //store to display output from helpers
     private bool clicked = true;             //State to break the game for change the scene
-
+    private int baseOfTrashGen = 2;     
 
     public int victory_time;                //timer to adjust time betwenn normal levels
     public int boss_victory_time;           //timer to adjust time between boss and normal level
@@ -60,7 +60,7 @@ public class Clicker : MonoBehaviour
     //Prepare next level
     void NextLevel(){
         clicked = false;            
-        trash = (int)(Math.Pow(2, level + 4));  //create new trash for next levele
+        trash = (int)(Math.Pow(baseOfTrashGen, level + 4));  //create new trash for next levele
         if (level % 5 == 0)         //each 5th level come a boss level
         {
             animator.SetTrigger("Boss_Victory");
@@ -91,8 +91,8 @@ public class Clicker : MonoBehaviour
     //Logic from a click on the main-Button
     void TaskOnClick(){
         if(clicked){
-            trash -= 1;
-            money += 1;
+            trash -= 1 * level;
+            money += 1 * level;
         }
     }
 
@@ -100,7 +100,7 @@ public class Clicker : MonoBehaviour
     //Generate new trash
     void GenerateNewTrash()
     {
-        if(clicked) trash += (int)(Math.Pow(2, level - 2));
+        if(clicked) trash += (int)(Math.Pow(baseOfTrashGen, level - 2));
     }
 
     //Method to invoke after few seconds
@@ -113,7 +113,7 @@ public class Clicker : MonoBehaviour
 
     //Calculate new number of garbage on base of 2
     int newGarbage(){
-        return (int)Math.Pow(2, level + 4);
+        return (int)Math.Pow(baseOfTrashGen, level + 4);
     }
 
     // - add deltaTime to timeCounter
@@ -125,7 +125,6 @@ public class Clicker : MonoBehaviour
         timeIndicator.text = string.Format("{0}h{1}m{2}s", ts.Hours, ts.Minutes, ts.Seconds);
         moneyIndicator.text = money.ToString();
         trashIndicator.text = trash.ToString();
-        trashPerSecondIndicator.text = trashPerSecond.ToString();
         if (trash < 0) trashIndicator.text = 0.ToString();
         else trashIndicator.text = trash.ToString();
         levelIndicator.text = level.ToString();

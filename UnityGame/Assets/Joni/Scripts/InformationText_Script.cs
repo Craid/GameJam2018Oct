@@ -9,7 +9,7 @@ public class InformationText_Script : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        color = Color.red;
+        color = Color.black;
         GetComponent<Text>().color = this.color;
 	}
 	

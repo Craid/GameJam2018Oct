@@ -32,6 +32,7 @@ public class Helper_Script : MonoBehaviour {
 	void Update () {
         priceIndicator.text = price.ToString();
         countIndicator.text = count.ToString();
+        efficiencyIndicator.text = trashPerSecond.ToString();
     }
 
     // multiply the count and the trashperSecond
@@ -43,6 +44,8 @@ public class Helper_Script : MonoBehaviour {
     void ClickAddOne(){
         if(clicker.GetMoney() - price >= 0){
             clicker.Pay(price);
+            price += (int)(price * 0.1);
+            trashPerSecond += (int)(trashPerSecond * 0.11);
             count++;
         }
     }
