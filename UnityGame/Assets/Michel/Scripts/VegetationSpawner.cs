@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VegetationSpawner : MonoBehaviour, IHandleClick {
+public class VegetationSpawner : IHandleClick {
 
 
 	public List<GameObject> bigSpawns = new List<GameObject>();
@@ -10,14 +10,8 @@ public class VegetationSpawner : MonoBehaviour, IHandleClick {
 
 	public MeshRenderer grass;
 
-	void Start(){
-
-		InvokeRepeating ("HandleClick", 0, 0.3f);
-	}
-
-
 	//Spawns a new location
-	public void HandleClick(){
+	public override void HandleClick(){
 		foreach (Transform child in transform) {
 			GameObject.Destroy(child.gameObject);
 		}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IHandleClick {
+public abstract class IHandleClick : MonoBehaviour{
 	
-	void HandleClick ();
+	public abstract void HandleClick ();
 }

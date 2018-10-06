@@ -2,15 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelHandleClick : MonoBehaviour {
+public class LevelHandleClick : IHandleClick {
 
-	// Use this for initialization
-	void Start () {
-		
+	public IHandleClick[] handleClickList;
+
+	void Start(){
+		handleClickList = GetComponentsInChildren<IHandleClick>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+
+
+	//Triggers all registeres handleClick Interfaces
+	public override void HandleClick(){
+		foreach (IHandleClick handleClickItem in handleClickList) {
+			if ( handleClickItem.GetInstanceID() != GetInstanceID() )
+			{
+				handleClickItem.HandleClick ();
+			}
+		}
 	}
 }
