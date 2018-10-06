@@ -1954,7 +1954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   helperName: Alte Oma
   count: 0
-  price: 10
+  price: 34
   trashPerSecond: 1
   addOne: {fileID: 1684304928}
   nameIndicator: {fileID: 793418521}
@@ -3048,8 +3048,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   helperName: "M\xFCllabsauganlage"
   count: 0
-  price: 10485760
-  trashPerSecond: 20736
+  price: 2211097
+  trashPerSecond: 1296
   addOne: {fileID: 1350526560}
   nameIndicator: {fileID: 1461784599}
   efficiencyIndicator: {fileID: 1179713589}
@@ -3952,8 +3952,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   helperName: Hippie
   count: 0
-  price: 320
-  trashPerSecond: 12
+  price: 248
+  trashPerSecond: 6
   addOne: {fileID: 324458877}
   nameIndicator: {fileID: 960547404}
   efficiencyIndicator: {fileID: 1976168412}
@@ -4798,8 +4798,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   helperName: "M\xFCllfachkraft"
   count: 0
-  price: 10240
-  trashPerSecond: 144
+  price: 5654
+  trashPerSecond: 36
   addOne: {fileID: 612880014}
   nameIndicator: {fileID: 1046156725}
   efficiencyIndicator: {fileID: 1478353854}
@@ -5276,8 +5276,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   helperName: "M\xFCllwagen"
   count: 0
-  price: 327680
-  trashPerSecond: 1728
+  price: 117612
+  trashPerSecond: 216
   addOne: {fileID: 1178543050}
   nameIndicator: {fileID: 827959297}
   efficiencyIndicator: {fileID: 1077185648}

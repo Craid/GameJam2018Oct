@@ -11,6 +11,8 @@ public class Helper_Script : MonoBehaviour {
     public int price;
     public int trashPerSecond;
 
+    
+
     //UI-Elements and Scripts
     public Button addOne;
     public Text nameIndicator;
@@ -44,7 +46,7 @@ public class Helper_Script : MonoBehaviour {
     void ClickAddOne(){
         if(clicker.GetMoney() - price >= 0){
             clicker.Pay(price);
-            price += (int)(price * 0.1);
+            price += (int)(price * 0.03);
             count++;
         }
     }

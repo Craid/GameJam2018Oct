@@ -91,8 +91,12 @@ public class Clicker : MonoBehaviour
     //Logic from a click on the main-Button
     void TaskOnClick(){
         if(clicked){
-            trash -= 1 * level;
-            money += 1 * level;
+
+            int clickDMG = (int)Math.Ceiling(newGarbage() / 200.0);
+
+
+            trash -= clickDMG;
+            money += clickDMG;
         }
     }
 
@@ -135,6 +139,7 @@ public class Clicker : MonoBehaviour
         money -= price;
         moneyIndicator.text = money.ToString();
     }
+
 
 
 
