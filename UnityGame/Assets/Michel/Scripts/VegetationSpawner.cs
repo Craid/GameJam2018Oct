@@ -48,10 +48,6 @@ public class VegetationSpawner : IHandleClick {
 
 	public void SetLevel( int level){
 		this.level = level;
-		Color materialColor = grass.GetComponent<MeshRenderer>().sharedMaterial.color;
-		grass.GetComponent<MeshRenderer>().sharedMaterial.color = new Color (materialColor.r*0.95f,materialColor.g*0.95f,materialColor.b*0.95f,materialColor.a);
-		Debug.Log (grass.GetComponent<MeshRenderer>().sharedMaterial.color);
-	
 	}
 
 }
