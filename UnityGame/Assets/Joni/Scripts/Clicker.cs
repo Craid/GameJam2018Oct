@@ -60,7 +60,7 @@ public class Clicker : MonoBehaviour
     //Prepare next level
     void NextLevel(){
         clicked = false;            
-        trash = (int)(Math.Pow(baseOfTrashGen, level + 4));  //create new trash for next levele
+        trash = (int)(Math.Pow(baseOfTrashGen, level + 2));  //create new trash for next levele
         if (level % 5 == 0)         //each 5th level come a boss level
         {
             animator.SetTrigger("Boss_Victory");
@@ -113,7 +113,7 @@ public class Clicker : MonoBehaviour
 
     //Calculate new number of garbage on base of 2
     int newGarbage(){
-        return (int)Math.Pow(baseOfTrashGen, level + 4);
+        return (int)Math.Pow(baseOfTrashGen, level + 2);
     }
 
     // - add deltaTime to timeCounter
