@@ -53,7 +53,6 @@ public class Clicker : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
         button.onClick.AddListener(TaskOnClick);
         trash = newGarbage();
         InvokeRepeating("GenerateNewTrash", 0, 1);
@@ -64,7 +63,6 @@ public class Clicker : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(level);
         if (clicked)
         {
             CalculateTimeAndUpdateUI();
@@ -73,8 +71,8 @@ public class Clicker : MonoBehaviour
             {
                 if(level < 20){
                     NextLevel();
-                } else if(level == 20){
-                    SceneManager.LoadScene("StatisticScene", LoadSceneMode.Single);
+                } else if(level >= 20){
+                    SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
                 }
 
             }

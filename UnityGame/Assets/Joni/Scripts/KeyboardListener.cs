@@ -17,7 +17,7 @@ public class KeyboardListener : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(Input.GetKeyDown(KeyCode.A)){
+        if(Input.GetKeyDown(KeyCode.F9)){
             Debug.Log("CHeat");
             clickerScript.Cheat();
         }
