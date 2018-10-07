@@ -63,6 +63,8 @@ public class Clicker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Debug.Log(level);
         if (clicked)
         {
             CalculateTimeAndUpdateUI();
@@ -71,7 +73,7 @@ public class Clicker : MonoBehaviour
             {
                 if(level < 20){
                     NextLevel();
-                } else if(level >= 20){
+                } else if(level == 20){
                     SceneManager.LoadScene("StatisticScene", LoadSceneMode.Single);
                 }
 
@@ -80,7 +82,7 @@ public class Clicker : MonoBehaviour
     }
 
     //Prepare next level
-    void NextLevel(){
+    private void NextLevel(){
         clicked = false;
         level++;
         if (level % 5 == 0)         //each 5th level come a boss level
@@ -225,7 +227,7 @@ public class Clicker : MonoBehaviour
     public void Cheat(){
         this.level = 20;
         foreach(Helper_Script helper in helpers){
-            helper.count = 60;
+            helper.count = 150;
         }
 
     }
