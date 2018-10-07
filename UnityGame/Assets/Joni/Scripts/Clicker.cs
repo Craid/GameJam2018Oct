@@ -32,8 +32,13 @@ public class Clicker : MonoBehaviour
     public Text trashPerSecondIndicator;
     public Text levelIndicator;
 
+
 	//Anbindung an Grafik
 	public LevelManager levelManagerScript;
+
+    //DMG Zahlen
+    public FloatingTextController ftc;
+
 
     // Use this for initialization
     void Start()
@@ -98,8 +103,9 @@ public class Clicker : MonoBehaviour
         if(clicked){
 
             int clickDMG = (int)Math.Ceiling(newGarbage() / 200.0);
+            levelManagerScript.HandleClick ();
+            ftc.CreateFloatingText(clickDMG.ToString(), transform);
 
-			levelManagerScript.HandleClick ();
 
             trash -= clickDMG;
             money += clickDMG;
