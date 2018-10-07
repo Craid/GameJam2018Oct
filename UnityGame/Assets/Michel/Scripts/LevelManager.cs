@@ -16,6 +16,9 @@ public class LevelManager : IHandleClick {
 	void Start(){
 		Instantiate (level, currentLevel.transform);
 		handleClickList = GetComponentsInChildren<IHandleClick>();
+
+		trashManager.SetActive (true);
+		showVictory.SetActive (false);
 	}
 
 	//Triggers all registeres handleClick Interfaces
@@ -31,6 +34,9 @@ public class LevelManager : IHandleClick {
 	public void setLevel(int levelNumber){
 		updateLevel (levelNumber);
 
+		trashManager.SetActive (false);
+		showVictory.SetActive (true);
+
 		if (levelNumber % 5 == 0)
 			StartBossVictoryAnimation ();
 		else
@@ -38,23 +44,16 @@ public class LevelManager : IHandleClick {
 	}
 
 	private void updateLevel(int levelNumber){
-		level.GetComponentInChildren<VegetationSpawner> ().SetLevel (levelNumber);
-
-		if (levelNumber % 5 == 0)
-			StartBossVictoryAnimation ();
-		else
-			StartVictoryAnimation ();
+		currentLevel.GetComponentInChildren<VegetationSpawner> ().SetLevel (levelNumber);
 	}
 
 	private void StartVictoryAnimation(){
-		trashManager.SetActive (false);
-		showVictory.SetActive (true);
+		Debug.Log ("Play Victory");
 		showVictory.GetComponent<ShowVictoryScript>().SetVictoryTriggerToVictory();
 	}
 
 	private void StartBossVictoryAnimation(){
-		trashManager.SetActive (false);
-		showVictory.SetActive (true);
+		Debug.Log ("Play BossVictory");
 		showVictory.GetComponent<ShowVictoryScript>().SetVictoryTriggerToBossVictory();
 	}
 

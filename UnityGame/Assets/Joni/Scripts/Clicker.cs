@@ -118,7 +118,7 @@ public class Clicker : MonoBehaviour
     void ReturnToClicker()
     {
         clicked = true;
-        animator.SetTrigger("Clicker");
+        animator.SetTrigger("Animation_Ended");
     }
 
     //Calculate new number of garbage on base of 2
