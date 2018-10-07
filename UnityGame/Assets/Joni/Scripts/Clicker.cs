@@ -15,7 +15,7 @@ public class Clicker : MonoBehaviour
     private int baseOfTrashGen = 2;     
 
     public int victory_time;                //timer to adjust time betwenn normal levels
-    public int boss_victory_time;           //timer to adjust time between boss and normal level
+    public float boss_victory_time;           //timer to adjust time between boss and normal level
 
     float time;                             //adding secounds
     public Animator animator;               //To control the trigger
@@ -31,6 +31,9 @@ public class Clicker : MonoBehaviour
     public Text trashIndicator;
     public Text trashPerSecondIndicator;
     public Text levelIndicator;
+
+	//Anbindung an Grafik
+	public LevelManager levelManagerScript;
 
     // Use this for initialization
     void Start()
@@ -72,6 +75,8 @@ public class Clicker : MonoBehaviour
             Invoke("ReturnToClicker", victory_time);
         }
         level++;
+
+		levelManagerScript.setLevel (level);
     }
 
     //All Helper will be calculated and get influence on the money and trash
@@ -94,6 +99,7 @@ public class Clicker : MonoBehaviour
 
             int clickDMG = (int)Math.Ceiling(newGarbage() / 200.0);
 
+			levelManagerScript.HandleClick ();
 
             trash -= clickDMG;
             money += clickDMG;

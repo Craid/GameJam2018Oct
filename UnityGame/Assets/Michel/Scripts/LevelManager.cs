@@ -16,8 +16,6 @@ public class LevelManager : IHandleClick {
 	void Start(){
 		Instantiate (level, currentLevel.transform);
 		handleClickList = GetComponentsInChildren<IHandleClick>();
-
-		InvokeRepeating ("StartVictoryAnimation",1f, 5f);
 	}
 
 	//Triggers all registeres handleClick Interfaces
@@ -41,6 +39,11 @@ public class LevelManager : IHandleClick {
 
 	private void updateLevel(int levelNumber){
 		level.GetComponentInChildren<VegetationSpawner> ().SetLevel (levelNumber);
+
+		if (levelNumber % 5 == 0)
+			StartBossVictoryAnimation ();
+		else
+			StartVictoryAnimation ();
 	}
 
 	private void StartVictoryAnimation(){

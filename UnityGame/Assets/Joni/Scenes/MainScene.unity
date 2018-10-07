@@ -1281,6 +1281,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 400110427}
   m_CullTransparentMesh: 0
+--- !u!114 &428108217 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114533712872311102, guid: 9b372f3476ca42a4690e1aa3541622b7,
+    type: 2}
+  m_PrefabInternal: {fileID: 234209612}
+  m_Script: {fileID: 11500000, guid: a4f01cff515e62442957dcae1d20acac, type: 3}
 --- !u!1 &482131192
 GameObject:
   m_ObjectHideFlags: 0
@@ -3201,7 +3207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   victory_time: 3
-  boss_victory_time: 5
+  boss_victory_time: 4.5
   animator: {fileID: 1287998602}
   helpers:
   - {fileID: 743859174}
@@ -3215,6 +3221,7 @@ MonoBehaviour:
   trashIndicator: {fileID: 1788269935}
   trashPerSecondIndicator: {fileID: 0}
   levelIndicator: {fileID: 162401015}
+  levelManagerScript: {fileID: 428108217}
 --- !u!224 &1287998601
 RectTransform:
   m_ObjectHideFlags: 0
