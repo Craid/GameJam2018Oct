@@ -20,6 +20,8 @@ public class LevelManager : IHandleClick {
 		trashManager.SetActive (true);
 		showVictory.SetActive (false);
 
+		InvokeRepeating ("StartBossVictoryAnimation", 0, 5f);
+
 	}
 
 	//Triggers all registeres handleClick Interfaces
@@ -35,9 +37,6 @@ public class LevelManager : IHandleClick {
 	public void setLevel(int levelNumber){
 		updateLevel (levelNumber);
 
-		trashManager.SetActive (false);
-		showVictory.SetActive (true);
-
 		if (levelNumber % 5 == 0)
 			StartBossVictoryAnimation ();
 		else
@@ -50,11 +49,15 @@ public class LevelManager : IHandleClick {
 
 	private void StartVictoryAnimation(){
 		Debug.Log ("Play Victory");
+		trashManager.SetActive (false);
+		showVictory.SetActive (true);
 		showVictory.GetComponent<ShowVictoryScript>().SetVictoryTriggerToVictory();
 	}
 
 	private void StartBossVictoryAnimation(){
 		Debug.Log ("Play BossVictory");
+		trashManager.SetActive (false);
+		showVictory.SetActive (true);
 		showVictory.GetComponent<ShowVictoryScript>().SetVictoryTriggerToBossVictory();
 	}
 
