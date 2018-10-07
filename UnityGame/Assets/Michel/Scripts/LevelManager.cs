@@ -9,28 +9,16 @@ public class LevelManager : IHandleClick {
 	public GameObject currentLevel;
 	public GameObject level;
 
-
 	public GameObject trashManager;
 	public GameObject showVictory;
 
-	int levelASD = 1;
 
 	void Start(){
 		Instantiate (level, currentLevel.transform);
 		handleClickList = GetComponentsInChildren<IHandleClick>();
 
-		updateLevel (1);
-
-		InvokeRepeating ("UpLevel", 0, 3f);
-		InvokeRepeating ("HandleClick", 0, 1f);
+		InvokeRepeating ("StartVictoryAnimation",1f, 5f);
 	}
-
-	private void UpLevel(){
-		levelASD++;
-		updateLevel (levelASD);
-	}
-
-
 
 	//Triggers all registeres handleClick Interfaces
 	public override void HandleClick(){
@@ -52,8 +40,7 @@ public class LevelManager : IHandleClick {
 	}
 
 	private void updateLevel(int levelNumber){
-
-		level.GetComponentsInChildren<VegetationSpawner> ()[0].SetLevel (levelNumber);
+		level.GetComponentInChildren<VegetationSpawner> ().SetLevel (levelNumber);
 	}
 
 	private void StartVictoryAnimation(){

@@ -7,8 +7,8 @@ public class ShowVictoryScript : MonoBehaviour {
 	private float time;
 	private float animationTime = 0.5f;
 
-	private float victoryTime = 5f;
-	private float bossVictoryTime = 10f;
+	private float victoryTime = 3f;
+	private float bossVictoryTime = 4.5f;
 
 	private bool playedDab;
 	private bool startedTrash;

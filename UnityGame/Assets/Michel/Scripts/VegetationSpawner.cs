@@ -12,7 +12,11 @@ public class VegetationSpawner : IHandleClick {
 
 	public MeshRenderer grass;
 
-	public int level = 1;
+	private int level = 1;
+
+	void Start(){
+		HandleClick ();
+	}
 
 	//Spawns a new location
 	public override void HandleClick(){
