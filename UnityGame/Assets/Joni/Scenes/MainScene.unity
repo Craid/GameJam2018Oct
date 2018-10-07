@@ -850,8 +850,8 @@ RectTransform:
   m_Children:
   - {fileID: 1505504313}
   - {fileID: 821143736}
-  - {fileID: 482131193}
   - {fileID: 799201905}
+  - {fileID: 482131193}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -987,7 +987,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 1, g: 0.9858491, b: 0.9858491, a: 0}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.43529412}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1283,17 +1283,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 482131192}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 266779428}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.26747918, y: 0}
   m_AnchorMax: {x: 1, y: 0.8566319}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.00012207031, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &482131194
 MonoBehaviour:
@@ -1484,17 +1484,17 @@ Prefab:
     - target: {fileID: 224659946897418206, guid: 8bfbb59657506499381d9f4a071d8980,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224659946897418206, guid: 8bfbb59657506499381d9f4a071d8980,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 356.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224659946897418206, guid: 8bfbb59657506499381d9f4a071d8980,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 64.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224659946897418206, guid: 8bfbb59657506499381d9f4a071d8980,
         type: 2}
@@ -1509,22 +1509,22 @@ Prefab:
     - target: {fileID: 224659946897418206, guid: 8bfbb59657506499381d9f4a071d8980,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224659946897418206, guid: 8bfbb59657506499381d9f4a071d8980,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224659946897418206, guid: 8bfbb59657506499381d9f4a071d8980,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224659946897418206, guid: 8bfbb59657506499381d9f4a071d8980,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224659946897418206, guid: 8bfbb59657506499381d9f4a071d8980,
         type: 2}
@@ -1743,7 +1743,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 1, g: 0.9858491, b: 0.9858491, a: 0}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.43529412}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1946,6 +1946,7 @@ GameObject:
   - component: {fileID: 743859172}
   - component: {fileID: 743859174}
   - component: {fileID: 743859175}
+  - component: {fileID: 743859176}
   m_Layer: 5
   m_Name: oldGrandma
   m_TagString: Untagged
@@ -2053,6 +2054,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &743859176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 743859170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7693456e6b2da4f38a9b6fa0b0960d26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clicker: {fileID: 1287998600}
+  addButton: {fileID: 1684304928}
 --- !u!1 &760524308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2939,7 +2953,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 1, g: 0.9858491, b: 0.9858491, a: 0}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.43529412}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3079,6 +3093,7 @@ GameObject:
   - component: {fileID: 1248435182}
   - component: {fileID: 1248435181}
   - component: {fileID: 1248435184}
+  - component: {fileID: 1248435185}
   m_Layer: 5
   m_Name: garbageSuctionMaschine
   m_TagString: Untagged
@@ -3186,6 +3201,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1248435185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1248435179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7693456e6b2da4f38a9b6fa0b0960d26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clicker: {fileID: 1287998600}
+  addButton: {fileID: 1350526560}
 --- !u!1 &1282614538
 GameObject:
   m_ObjectHideFlags: 0
@@ -3266,6 +3294,7 @@ GameObject:
   - component: {fileID: 1287998600}
   - component: {fileID: 1287998602}
   - component: {fileID: 1287998603}
+  - component: {fileID: 1287998604}
   m_Layer: 5
   m_Name: ClickerGame
   m_TagString: Untagged
@@ -3284,6 +3313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd7ed45754214858bedde9ffcda033f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trashCollected: 0
   victory_time: 3
   boss_victory_time: 4.5
   animator: {fileID: 1287998602}
@@ -3351,6 +3381,24 @@ MonoBehaviour:
   popupText: {fileID: 114955294357762172, guid: 8bfbb59657506499381d9f4a071d8980,
     type: 2}
   canvas: {fileID: 266779424}
+--- !u!114 &1287998604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1287998599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a199b0900414b5c83406d0227eceb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grandma: {fileID: 1684304928}
+  hippie: {fileID: 324458877}
+  garbage: {fileID: 612880014}
+  garbageTruck: {fileID: 1178543050}
+  garbageSuctionMaschine: {fileID: 1350526560}
+  clicker: {fileID: 482131194}
+  clickerScript: {fileID: 1287998600}
 --- !u!1 &1324495905
 GameObject:
   m_ObjectHideFlags: 0
@@ -3547,7 +3595,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 1, g: 0.9858491, b: 0.9858491, a: 0}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.43529412}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3934,6 +3982,7 @@ GameObject:
   - component: {fileID: 1483911614}
   - component: {fileID: 1483911613}
   - component: {fileID: 1483911616}
+  - component: {fileID: 1483911617}
   m_Layer: 5
   m_Name: hippie
   m_TagString: Untagged
@@ -4041,6 +4090,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1483911617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1483911611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7693456e6b2da4f38a9b6fa0b0960d26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clicker: {fileID: 1287998600}
+  addButton: {fileID: 324458877}
 --- !u!1 &1492286919
 GameObject:
   m_ObjectHideFlags: 0
@@ -4553,7 +4615,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 1, g: 0.9858491, b: 0.9858491, a: 0}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.43529412}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4638,7 +4700,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3272774, y: 0}
-  m_AnchorMax: {x: 0.65627795, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4780,6 +4842,7 @@ GameObject:
   - component: {fileID: 1862142411}
   - component: {fileID: 1862142410}
   - component: {fileID: 1862142413}
+  - component: {fileID: 1862142414}
   m_Layer: 5
   m_Name: garbage
   m_TagString: Untagged
@@ -4887,6 +4950,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1862142414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1862142408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7693456e6b2da4f38a9b6fa0b0960d26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clicker: {fileID: 1287998600}
+  addButton: {fileID: 612880014}
 --- !u!1 &1866822544
 GameObject:
   m_ObjectHideFlags: 0
@@ -5258,6 +5334,7 @@ GameObject:
   - component: {fileID: 2082499546}
   - component: {fileID: 2082499545}
   - component: {fileID: 2082499548}
+  - component: {fileID: 2082499549}
   m_Layer: 5
   m_Name: garbageTruck
   m_TagString: Untagged
@@ -5365,6 +5442,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &2082499549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2082499543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7693456e6b2da4f38a9b6fa0b0960d26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clicker: {fileID: 1287998600}
+  addButton: {fileID: 1178543050}
 --- !u!1 &2129697329
 GameObject:
   m_ObjectHideFlags: 0

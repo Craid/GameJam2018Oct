@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Clicker : MonoBehaviour
 {
@@ -12,7 +13,16 @@ public class Clicker : MonoBehaviour
     private int trash;                       //trashcounter for the current level 
     private int trashPerSecond;              //store to display output from helpers
     private bool clicked = true;             //State to break the game for change the scene
-    private int baseOfTrashGen = 2;     
+    private int baseOfTrashGen = 2;
+
+
+    private int manhourGrandma = 0;
+    private int manhourHippie = 0;
+    private int manhourGarbage = 0;
+    private int manhourGarbageTruck = 0;
+    private int manhourGarbageSuctionMaschine = 0;
+
+    public int trashCollected = 0;
 
     public int victory_time;                //timer to adjust time betwenn normal levels
     public float boss_victory_time;           //timer to adjust time between boss and normal level
@@ -43,6 +53,7 @@ public class Clicker : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         button.onClick.AddListener(TaskOnClick);
         trash = newGarbage();
         InvokeRepeating("GenerateNewTrash", 0, 1);
@@ -52,45 +63,83 @@ public class Clicker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (clicked)
         {
-
             CalculateTimeAndUpdateUI();
 
             if (trash <= 0)
             {
-                NextLevel();
+                if(level < 20){
+                    NextLevel();
+                } else if(level >= 20){
+                    SceneManager.LoadScene("StatisticScene", LoadSceneMode.Single);
+                }
+
             }
         }
     }
 
     //Prepare next level
     void NextLevel(){
-        clicked = false;            
-        trash = (int)(Math.Pow(baseOfTrashGen, level + 2));  //create new trash for next levele
+        clicked = false;
+        level++;
         if (level % 5 == 0)         //each 5th level come a boss level
         {
+            trash = (int)(Math.Pow(baseOfTrashGen, level + 2)*5);  //create new trash for next levele
+            trashIndicator.text = trash.ToString();
             animator.SetTrigger("Boss_Victory");
             Invoke("ReturnToClicker", boss_victory_time);
         }
         else
         {
+            trash = (int)(Math.Pow(baseOfTrashGen, level + 2));  //create new trash for next levele
             animator.SetTrigger("Victory");
             Invoke("ReturnToClicker", victory_time);
         }
-        level++;
-
-		levelManagerScript.setLevel (level);
+        levelManagerScript.setLevel (level);
     }
 
     //All Helper will be calculated and get influence on the money and trash
     void HelperDoWork(){
         if(clicked){
             int trashPerSecond = 0;
+            int trashFromGrandma = 0;
+            int trashFromHippie = 0;
+            int trashFromGarbage = 0;
+            int trashFromGarbageTruck = 0;
+            int trashFromGarbageSuctionMaschine = 0;
             foreach(Helper_Script helper in helpers){
-                trashPerSecond += helper.CalculateTrashPerSecond();
+
+
+                if(helper.helperName.Equals("Alte Oma")){
+                    trashFromGrandma += helper.CalculateTrashPerSecond();
+                    manhourGrandma += trashFromGrandma;
+                }
+                if (helper.helperName.Equals("Hippie"))
+                {
+                    trashFromHippie += helper.CalculateTrashPerSecond();
+                    manhourHippie += trashFromHippie;
+                }
+                if (helper.helperName.Equals("Müllfachkraft"))
+                {
+                    trashFromGarbage += helper.CalculateTrashPerSecond();
+                    manhourGarbage += trashFromGarbage;
+                }
+                if (helper.helperName.Equals("Müllwagen"))
+                {
+                    trashFromGarbageTruck += helper.CalculateTrashPerSecond();
+                    manhourGarbageTruck += trashFromGarbageTruck;
+                }
+                if (helper.helperName.Equals("Müllabsauganlage"))
+                {
+                    trashFromGarbageSuctionMaschine += helper.CalculateTrashPerSecond();
+                    manhourGarbageSuctionMaschine += trashFromGarbageSuctionMaschine;
+                }
+
+
             }
+
+            trashPerSecond = trashFromGrandma + trashFromHippie + trashFromGarbage + trashFromGarbageTruck + trashFromGarbageSuctionMaschine;
             this.trashPerSecond = trashPerSecond;
             trash -= trashPerSecond;
             money += trashPerSecond;
@@ -106,7 +155,7 @@ public class Clicker : MonoBehaviour
             levelManagerScript.HandleClick ();
             ftc.CreateFloatingText(clickDMG.ToString(), transform);
 
-
+            trashCollected += clickDMG;
             trash -= clickDMG;
             money += clickDMG;
         }
@@ -159,5 +208,25 @@ public class Clicker : MonoBehaviour
 
     public int GetMoney(){
         return money;
+    }
+
+    public int GetHelperTrash(){
+        return manhourGrandma + manhourHippie + manhourGarbage + manhourGarbageTruck + manhourGarbageSuctionMaschine;
+    }
+
+    public void SetLevel(int level){
+
+    }
+
+    public void SetMoney(int money){
+
+    }
+
+    public void Cheat(){
+        this.level = 20;
+        foreach(Helper_Script helper in helpers){
+            helper.count = 60;
+        }
+
     }
 }
