@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Michel/Scenes/EndScene.unity
     guid: 5e55fa1208e44d0449bc43cf4784f454
-  - enabled: 1
-    path: Assets/Joni/Scenes/StatisticScene.unity
-    guid: 03cace4d3acf54cd999478e755264197
   m_configObjects: {}
