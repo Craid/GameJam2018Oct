@@ -12,18 +12,10 @@ public class TrashManagerHandleClick : IHandleClick {
 	public override void HandleClick(){
 
 		foreach (Transform child in trashItemPlaceHolder.transform){
-			Destroy(child.gameObject);
+			DestroyImmediate(child.gameObject);
 		}
 
-		Quaternion q = Quaternion.Euler (new Vector3 (Random.Range(60,360),Random.Range(0,360),Random.Range(60,360)));
-		Vector3 pos = Random.insideUnitSphere;
-		pos.y = 0;
-		pos.Normalize();
-		pos *= 2;
-		pos = pos + trashItemPlaceHolder.transform.position;
-
-		Instantiate (trashItems [Random.Range (0, trashItems.Length - 1)], pos,q, trashItemPlaceHolder.transform);
-		pos.y = player.transform.position.y;
-		player.transform.LookAt (pos);
+		Instantiate (trashItems [Random.Range (0, trashItems.Length - 1)], trashItemPlaceHolder.transform);
+		player.transform.rotation = Quaternion.Euler(new Vector3 (0, Random.Range(0,360), 0));
 	}
 }

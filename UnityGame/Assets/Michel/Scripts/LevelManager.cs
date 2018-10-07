@@ -19,6 +19,7 @@ public class LevelManager : IHandleClick {
 
 		trashManager.SetActive (true);
 		showVictory.SetActive (false);
+
 	}
 
 	//Triggers all registeres handleClick Interfaces

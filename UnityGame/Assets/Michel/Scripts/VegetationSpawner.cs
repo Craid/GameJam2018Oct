@@ -24,7 +24,7 @@ public class VegetationSpawner : IHandleClick {
 			GameObject.Destroy(child.gameObject);
 		}
 
-		int bigSpawnCount = Random.Range (1,16 - level/32);
+		int bigSpawnCount = Random.Range (1,12 - level/4);
 
 		for (int i = 0; i < bigSpawnCount; i++) {
 			Quaternion q = Quaternion.Euler(new Vector3(Random.Range(-10,10),Random.Range(0,360),Random.Range(-10,10)));
@@ -32,7 +32,7 @@ public class VegetationSpawner : IHandleClick {
 			Instantiate (bigSpawns[Random.Range(0,bigSpawns.Count)],transformPosition,q,this.transform);
 		}
 
-		int smallSpawnCount = Random.Range (16,64-level/8);
+		int smallSpawnCount = Random.Range (4,32-level*2);
 
 		for (int i = 0; i < smallSpawnCount; i++) {
 			Quaternion q = Quaternion.Euler(new Vector3(Random.Range(-10,10),Random.Range(0,360),Random.Range(-10,10)));
