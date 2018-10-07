@@ -11972,9 +11972,10 @@ GameObject:
   m_Component:
   - component: {fileID: 847433698}
   - component: {fileID: 847433697}
+  - component: {fileID: 847433699}
   m_Layer: 0
   m_Name: AggressiveTone
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11988,11 +11989,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ade8f10c61d191b4594a288fe0a6c9d7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4fa15a1fd9578da4e9ff5c43fbefe09a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.8
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -12087,6 +12088,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &847433699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 847433696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001fbde9de83b7f4db182a46fc862c1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  engineStartClip: {fileID: 8300000, guid: 4fa15a1fd9578da4e9ff5c43fbefe09a, type: 3}
+  engineLoopClip: {fileID: 8300000, guid: 6dec7f7163063934ea8fa4755a28f555, type: 3}
 --- !u!4 &848177539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4235191040942354, guid: 5b0d9bab235242348b3fa21495b73f69,

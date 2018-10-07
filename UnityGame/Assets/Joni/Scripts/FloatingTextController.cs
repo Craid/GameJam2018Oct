@@ -13,8 +13,8 @@ public class FloatingTextController : MonoBehaviour {
         //   Vector2 screenPosition = Camera.main.WorldToScreenPoint(location.position);
 
         Vector3 v3 = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-        float v2X = (cordX * v3.x) * 0.3807292f;
-        float v2Y = (cordY * v3.y) * 0.3807292f;
+		float v2X = (cordX * v3.x) * canvas.transform.localScale.x;
+		float v2Y = (cordY * v3.y) * canvas.transform.localScale.y;
         Vector3 v2 = new Vector3(v2X, v2Y, 0);
         Debug.Log(v2);
 
