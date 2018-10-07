@@ -20,8 +20,6 @@ public class LevelManager : IHandleClick {
 		trashManager.SetActive (true);
 		showVictory.SetActive (false);
 
-		InvokeRepeating ("StartBossVictoryAnimation", 0, 5f);
-
 	}
 
 	//Triggers all registeres handleClick Interfaces
